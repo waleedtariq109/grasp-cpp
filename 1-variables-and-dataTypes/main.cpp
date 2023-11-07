@@ -2,85 +2,152 @@
 
 int main()
 {
-    // Integers in C++ & different ways of initialize a variable
-
-    // What is Integers in C++
+    // Integer modifiers
     /*
-        1: You can declare a integer type variable using int keyword
-        2: Integers stores whole number not decimal point number like 10.52
-        3: Typically integers occupy 4 bytes or more in memory
+        In C++ we have integers modifers and and you can see some of them below. These modifiers
+        are only apply to integral type: those where you can store decimal number
+
+        NOTE: Below Example the 'n' represent the number of bits
+        1: signed integer - Range: [-2^n-1 ~ +2^n-1 - 1]
+        2: unsigned integer - Range: [0 ~ 2^n-1]
+        3: short integer - Range: if signed: [-2^n-1 ~ +2^n-1 - 1]; else: [0 ~ 2^n-1]
+        4: long integer - Range: if signed: [-2^n-1 ~ +2^n-1 - 1]; else: [0 ~ 2^n-1]
     */
 
-    // Different ways of initialize a variable
+    // signed represent both negative and positive integers
     /*
-        1: Asignment Variable Initialization
-        2: Braces Variable Initialization
-        3: Functional Variable Initialization
-     */
-
-    // What is Variable.
-    /*
-        1: Variable is simply the way to store data in memory.
-        2: We can think in a way like we store some data in let's say 'data' variable
-           so that data was stored in memory and we can refer to that piece of memory
-           using the variable name 'data'.
-        3: Variable name should start with character after that we can use the integer and
-           apart from that we can't use any special character except _ in variable name.
-        4: Variable are case-sensitive.
+         NOTE: Using the "signed" keyword when declaring a variable of type int
+         is not considered a common or recommended practice in C++.
+         The reason is that int is signed by default, and explicitly
+         specifying "signed" doesn't provide any additional information or clarity.
+         It's generally redundant and unnecessary.
     */
 
-    // Variable syntax
+    signed int value1{10};
+    signed int value2{-300};
+
+    std::cout << "The value1 is: " << value1 << std::endl;
+    std::cout << "The value2 is: " << value2 << std::endl;
+
+    // unsigned represent only positive integers
+
     /*
-          1: You need to define the data type
-          2: After data type you need to give it a name
-          3: After that you need to give the value
-
-
-          Syntax Example: typename variable_name {value}
+        If you specifically want a variable to store only positive integers,
+        it is a good practice to use the "unsigned" keyword to make your intention clear
+        in your code. By using "unsigned," you signal to other developers (and even to yourself)
+        that the variable should not hold negative values.
     */
 
-    std::cout << "------Braced Initialization------" << std::endl;
+    unsigned int value3{23};
+    // unsigned int value4{-37}; // Compiler error (narrowing conversion of n from int to unsigned int)
 
-    int elephant_count; // May contain some garbage Value . WARNING
-    int lion_count{};   // Initialize with 0
-    int cat_count{10};  // Initialize with 10
-    int dog_count{15};  // Initialize with 10
-    int total_animals{cat_count + dog_count + lion_count};
-    // int narrowing_conersion_with_braces {10.9} // This will give error
+    std::cout << "The value3 is: " << value3 << std::endl;
+    // std::cout << "The value4 is: " << value4 << std::endl;
 
-    std::cout << "You may see some garbage value: " << elephant_count << std::endl;
-    std::cout << "Lion Count: " << lion_count << std::endl;
-    std::cout << "Cat Count: " << cat_count << std::endl;
-    std::cout << "Dog Count: " << dog_count << std::endl;
-    std::cout << "Total Animals: " << total_animals << std::endl;
+    // Long and Short modifier example
 
-    std::cout << "------Functional Initialization------" << std::endl;
+    std::cout << "--------------------------" << std::endl;
 
-    int apple_count(10);                            // Contains 10
-    int orange_count(20);                           // Contains 20
-    int total_fruits(apple_count + orange_count);   // Contains apple_count + orange_count
-    int narrowing_conersion_with_functional(10.56); // Narrow the value may lost some data and less safer the brace initialization. NOT RECOMMENDED
+    int int_var{54};
+    signed signed_var{29};
+    unsigned unsigned_var{89};
+    signed int signed_int{87};
+    unsigned int unsigned_int{87};
 
-    std::cout << "Apple Count: " << apple_count << std::endl;
-    std::cout << "Orange Count: " << apple_count << std::endl;
-    std::cout << "Total Fruits: " << total_fruits << std::endl;
-    std::cout << "Narrowing conersion with Functional Initialization: " << narrowing_conersion_with_functional << std::endl;
+    std::cout << "-------------INT START-------------" << std::endl
+              << std::endl;
 
-    std::cout << "------Assignment Initialization------" << std::endl;
+    std::cout << "The value of int_var is: " << int_var << ", and the size of int_var is: " << sizeof(int_var) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_var is: " << signed_var << ", and the size of signed_var is: " << sizeof(signed_var) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_var is: " << unsigned_var << ", and the size of unsigned_var is: " << sizeof(unsigned_var) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_int is: " << signed_int << ", and the size of signed_int is: " << sizeof(signed_int) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_int is: " << unsigned_int << ", and the size of unsigned_int is: " << sizeof(unsigned_int) << std::endl
+              << std::endl;
 
-    int bike_count = 10;                             // Contains 10
-    int car_count = 20;                              // Contains 20
-    int total_vehicle = bike_count + car_count;      // Contains bike_count + car_count
-    int narrowing_conersion_with_assignment = 10.56; // Narrow the value may lost some data and less safer the brace initialization. NOT RECOMMENDED
+    std::cout << "-------------INT END-------------" << std::endl
+              << std::endl;
 
-    std::cout << "Bike Count: " << bike_count << std::endl;
-    std::cout << "Car Count: " << bike_count << std::endl;
-    std::cout << "Total Vehicle: " << total_vehicle << std::endl;
-    std::cout << "Narrowing conersion with Assignment Initialization: " << narrowing_conersion_with_assignment << std::endl;
+    short short_var{29};
+    short int short_int{78};
+    signed short int signed_short_int{67};
+    signed short signed_short{29};
+    unsigned short unsigned_short{11};
+    unsigned short int unsigned_short_int{87};
 
-    std::cout << "------TIP: We can also the variable memory size using sizeof()------" << std::endl;
-    std::cout << "Size of int: " << sizeof(int) << std::endl;
-    std::cout << "Size of bike_count variable: " << bike_count << std::endl;
+    std::cout << "-------------SHORT START-------------" << std::endl
+              << std::endl;
+
+    std::cout << "The value of short_var is: " << short_var << ", and the size of short_var is: " << sizeof(short_var) << std::endl
+              << std::endl;
+    std::cout << "The value of short_int is: " << short_int << ", and the size of short_int is: " << sizeof(short_int) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_short_int is: " << signed_short_int << ", and the size of signed_short_int is: " << sizeof(signed_short_int) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_short is: " << signed_short << ", and the size of signed_short is: " << sizeof(signed_short) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_short is: " << unsigned_short << ", and the size of unsigned_short is: " << sizeof(unsigned_short) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_short_int is: " << unsigned_short_int << ", and the size of unsigned_short_int is: " << sizeof(unsigned_short_int) << std::endl
+              << std::endl;
+
+    std::cout << "-------------SHORT END-------------" << std::endl
+              << std::endl;
+
+    long long_var{76};
+    long int long_int{33};
+    signed long int signed_long_int{71};
+    signed long signed_long{98};
+    unsigned long int unsigned_long_int{22};
+    unsigned long unsigned_long{87};
+
+    std::cout << "-------------LONG START-------------" << std::endl
+              << std::endl;
+
+    std::cout << "The value of long_var is: " << long_var << ", and the size of long_var is: " << sizeof(long_var) << std::endl
+              << std::endl;
+    std::cout << "The value of long_int is: " << long_int << ", and the size of long_int is: " << sizeof(long_int) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_long_int is: " << signed_long_int << ", and the size of signed_long_int is: " << sizeof(signed_long_int) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_long is: " << signed_long << ", and the size of signed_long is: " << sizeof(signed_long) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_long is: " << unsigned_long << ", and the size of unsigned_long is: " << sizeof(unsigned_long) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_long_int is: " << unsigned_long_int << ", and the size of unsigned_long_int is: " << sizeof(unsigned_long_int) << std::endl
+              << std::endl;
+
+    std::cout << "-------------LONG END-------------" << std::endl
+              << std::endl;
+
+    long long long_long_var{99};
+    long long int long_long_int{54};
+    signed long long signed_long_long{61};
+    signed long long int signed_long_long_int{12};
+    unsigned long long unsigned_long_long{88};
+    unsigned long long int unsigned_long_long_int{89};
+
+    std::cout << "-------------LONG START-------------" << std::endl
+              << std::endl;
+
+    std::cout << "The value of long_long_var is: " << long_long_var << ", and the size of long_long_var is: " << sizeof(long_long_var) << std::endl
+              << std::endl;
+    std::cout << "The value of long_long_int is: " << long_long_int << ", and the size of long_long_int is: " << sizeof(long_long_int) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_long_long_int is: " << signed_long_long_int << ", and the size of signed_long_long_int is: " << sizeof(signed_long_long_int) << std::endl
+              << std::endl;
+    std::cout << "The value of signed_long_long is: " << signed_long_long << ", and the size of signed_long_long is: " << sizeof(signed_long_long) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_long_long is: " << unsigned_long_long << ", and the size of unsigned_long_long is: " << sizeof(unsigned_long_long) << std::endl
+              << std::endl;
+    std::cout << "The value of unsigned_long_long_int is: " << unsigned_long_long_int << ", and the size of unsigned_long_long_int is: " << sizeof(unsigned_long_long_int) << std::endl
+              << std::endl;
+
+    std::cout << "-------------LONG END-------------" << std::endl
+              << std::endl;
 
     return 0;
 }
