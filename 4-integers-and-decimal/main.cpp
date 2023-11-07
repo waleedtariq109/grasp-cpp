@@ -10,7 +10,8 @@ int main() {
     */
 
     // Braced Initialization
-    int number; // Initialize with some garbage value: Some compiler may give warning
+    int number = 017; // Initialize with some garbage value: Some compiler may give warning
+    std::cout << number << std::endl;
     int number1 {}; // Initialize with 0 as a default value
 
     return 0;
