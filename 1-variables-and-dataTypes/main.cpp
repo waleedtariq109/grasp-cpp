@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    // Assignments
+    // Assignments in c++
     int var1{10};
     std::cout << "Var 1 (brace): " << var1 << std::endl;
     var1 = 20;
