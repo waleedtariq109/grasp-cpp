@@ -1,22 +1,44 @@
 #include <iostream>
 
-int addNumbers(int first_number, int second_number) {
-    int sum = first_number + second_number;
-    return sum;
-}
-
 int main() {
-    int first_number = 10; 
-    int second_number = 20;
+    /*
+    // ? Printing Data
+    std::cout << "Printing Data" << std::endl;
+    int age = 23;
+    std::cout << "Age: " << age << std::endl;
 
-    int sum = addNumbers(first_number, second_number);
+    // Log Error 
+    std::cerr << "Something went wrong" << std::endl;
 
-    std::cout << "The First number is: " << first_number << std::endl;
-    std::cout << "The second number is: " << second_number << std::endl;
-    std::cout << "The sum is " << sum << std::endl;
+    // Log Message 
+    std::clog << "Clog Message" << std::endl;
 
-    sum = addNumbers(20,45);
-    std::cout << "The sum is " << sum << std::endl;
+    // ? Taking Input
+    int val_1, val_2;
+    std::cout << "Enter Value 1: " << std::endl;
+    std::cin >> val_1;
+    std::cout << "Enter Value 2: " << std::endl;
+    std::cin >> val_2;
+
+    std::cout << "You enterd the " << val_1 << " and " << val_2 << std::endl;
+
+    std::string first_name, last_name;
+    std::cout << "Enter your firstname: " << std::endl;
+    std::cin >> first_name;
+    std::cout << "Enter your lastname: " << std::endl;
+    std::cin >> last_name;
+
+    std::cout << "Your fullname is: " << first_name + " " + last_name << std::endl;
+
+    */
+
+   // Get Data with spaces
+
+    std::string full_name;
+    std::cout << "Enter Fullname" << std::endl;
+    std::getline(std::cin, full_name);
+    std::cout << "Fullname is" << std::endl;
+    std::cout << full_name << std::endl;
 
     return 0;
 }
