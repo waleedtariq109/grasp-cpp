@@ -1,29 +1,19 @@
 #include <iostream>
+#include <iomanip>
 
 int main() {
-    signed int value_1 {20};
-    signed int value_2 {-98};
+    float number_1 {1.3749872837482789374289F};
+    double number_2 {1.3798479283748927498273};
+    long double number_3 {1.27349823748273894729L};
 
-    std::cout << value_1 << std::endl;
-    std::cout << value_2 << std::endl;
+    std::cout << "Size of float: " << sizeof(number_1) << std::endl;
+    std::cout << "Size of double: " << sizeof(number_2) << std::endl;
+    std::cout << "Size of long double: " << sizeof(number_3) << std::endl;
 
-    unsigned int value_3 {87};
-    // Unsigned integer can't have the negative value
-    // unsigned int value_4 {-327}; -> Compiler Error
-
-    int int_var {89};
-    signed int signed_int {238};
-    unsigned int unsigned_int {3727};
-    short int short_int {65};
-    long int long_int {82739};
-    long long int long_long_int {36726};
-
-    std::cout << "Int size: " << sizeof(int_var) << std::endl;
-    std::cout << "Signed Int size: " << sizeof(signed_int) << std::endl;
-    std::cout << "Unsigned Int size: " << sizeof(unsigned_int) << std::endl;
-    std::cout << "Short Int size: " << sizeof(short_int) << std::endl;
-    std::cout << "Long Int size: " << sizeof(long_int) << std::endl;
-    std::cout << "Long Long Int size: " << sizeof(long_long_int) << std::endl;
+    std::cout << std::setprecision(20);
+    std::cout << "Number 1: " << number_1 << std::endl;
+    std::cout << "Number 2: " << number_2 << std::endl;
+    std::cout << "Number 3: " << number_3 << std::endl;
 
     return 0;
 }
