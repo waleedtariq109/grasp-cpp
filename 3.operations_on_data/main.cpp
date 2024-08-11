@@ -19,5 +19,13 @@ int main()
   std::cout << "Hello\n";
   std::cout << "World\n";
 
+  std::cout << std::endl;
+
+  // std::flush
+
+  // std::flush, flushes the output buffer directly to the terminal
+  std::cout << "Flush this message" << std::endl
+            << std::flush;
+
   return 0;
 }
