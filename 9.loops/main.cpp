@@ -48,5 +48,13 @@ int main()
   }
   std::cout << j << std::endl;
 
+  // Loop with not hard coded condition value
+
+  const size_t LOOP_COUNT{10};
+  for (size_t k{0}; k < LOOP_COUNT; ++k)
+  {
+    std::cout << "Hello Bhapoo" << std::endl;
+  }
+
   return 0;
 }
