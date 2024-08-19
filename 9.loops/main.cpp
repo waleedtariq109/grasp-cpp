@@ -23,5 +23,18 @@ int main()
     std::cout << "Value: " << value << std::endl;
   }
 
+  std::cout << std::endl;
+
+  std::cout << "---------------" << std::endl;
+
+  std::cout << std::endl;
+
+  // Auto type deduction
+
+  for (auto value : bag_of_values)
+  {
+    std::cout << "Value: " << value << std::endl;
+  }
+
   return 0;
 }
