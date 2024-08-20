@@ -8,10 +8,22 @@ int main()
   std::cout << "The break statement" << std::endl;
   for (size_t i{0}; i < 20; ++i)
   {
-    std::cout << "index: " << i << std::endl;
     // Terminate or stop the loop if i == 6
     if (i == 6)
       break;
+    std::cout << "index: " << i << std::endl;
+  }
+
+  std::cout << std::endl;
+
+  // Skip the iteration
+  std::cout << "Skip the specific iteration" << std::endl;
+  for (size_t i{0}; i < 10; ++i)
+  {
+    // Skip the 6 element or iteration
+    if (i == 6)
+      continue;
+    std::cout << "index: " << i << std::endl;
   }
   return 0;
 }
