@@ -43,5 +43,21 @@ int main()
     ++i;
   }
 
+  size_t j{0};
+  do
+  {
+    if (j == 5)
+    {
+      ++j;
+      continue;
+    }
+    if (j == 16)
+    {
+      break;
+    }
+    std::cout << "index: " << j << std::endl;
+    ++j;
+  } while (j < 20);
+
   return 0;
 }
