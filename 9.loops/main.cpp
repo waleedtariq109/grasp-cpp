@@ -23,10 +23,15 @@ int main()
   while (end == false)
   {
     // Processing
-    std::cout << "What operation you want to make" << std::endl;
-    std::cout << "+, -, * and / are supported. Which operation you want to perform" << std::endl;
+    std::cout << "What operation you want to make, +, -, * and / are supported" << std::endl;
     std::cout << "You operation" << std::endl;
     std::cin >> operation;
+
+    if (operation != '+' && operation != '-' && operation != '*' && operation != '/')
+    {
+      std::cout << "Invalid operation: " << operation << std::endl;
+      continue;
+    }
 
     std::cout << std::endl;
     std::cout << "Now we want to know your operands" << std::endl;
