@@ -25,5 +25,23 @@ int main()
       continue;
     std::cout << "index: " << i << std::endl;
   }
+
+  size_t i{0};
+  while (i < 20)
+  {
+    if (i == 5)
+    {
+      ++i;
+      continue;
+    }
+    if (i == 16)
+    {
+      break;
+    }
+
+    std::cout << "index: " << i << std::endl;
+    ++i;
+  }
+
   return 0;
 }
