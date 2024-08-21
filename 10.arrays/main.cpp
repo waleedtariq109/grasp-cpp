@@ -62,5 +62,14 @@ int main()
     std::cout << "growth_rate[" << i << "]: " << growth_rate[i] << std::endl;
   }
 
+  std::cout << std::endl;
+
+  // Omit the size of the array
+  int class_sizes[]{33, 44, 22, 55, 45, 57, 13, 78, 53, 14, 23, 88, 64, 22, 41, 23, 56};
+  for (size_t i : class_sizes)
+  {
+    std::cout << "class_sizes: " << i << std::endl;
+  }
+
   return 0;
 }
