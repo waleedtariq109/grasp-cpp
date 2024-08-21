@@ -6,14 +6,15 @@ int main()
   int scores[10]; // The 10 we specified is the size of an array
 
   // Read the Data
-  std::cout << "Score[0]: " << scores[0] << std::endl;
-  std::cout << "Score[1]: " << scores[1] << std::endl;
+  std::cout << "Score[0]: " << scores[0] << std::endl; // Garbage Value
+  std::cout << "Score[1]: " << scores[1] << std::endl; // Garbage Value
 
   std::cout << std::endl;
 
   // Read data with loop
   for (size_t i{0}; i < 10; ++i)
   {
+    // Returns garbage value
     std::cout << "scores[" << i << "]: " << scores[i] << std::endl;
   }
 
@@ -46,6 +47,19 @@ int main()
   for (size_t i{0}; i < 5; ++i)
   {
     std::cout << "salaries[" << i << "]: " << salaries[i] << std::endl;
+  }
+
+  std::cout << std::endl;
+
+  // Declare an array but won't initialize all elements
+  /**
+   * If we initialize the array and left some element uninitialized then these element will
+   * get a value which is 0 by the compiler
+   */
+  int growth_rate[5]{22, 33, 12};
+  for (size_t i{0}; i < 5; ++i)
+  {
+    std::cout << "growth_rate[" << i << "]: " << growth_rate[i] << std::endl;
   }
 
   return 0;
