@@ -75,5 +75,16 @@ int main()
   const int zip_codes[]{60000, 56000, 54660};
   // zip_codes[0] = 43827; -> This will throw a compiler error
 
+  std::cout << std::endl;
+
+  // Operations on array data
+  int shops[]{20, 7, 200, 12, 70};
+  int total_shops{0};
+  for (int shop : shops)
+  {
+    total_shops += shop;
+  }
+  std::cout << "Total shops in Surrondings: " << total_shops << std::endl;
+
   return 0;
 }
