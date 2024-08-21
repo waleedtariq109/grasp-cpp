@@ -71,5 +71,9 @@ int main()
     std::cout << "class_sizes: " << i << std::endl;
   }
 
+  // Trying to modifing the const array
+  const int zip_codes[]{60000, 56000, 54660};
+  // zip_codes[0] = 43827; -> This will throw a compiler error
+
   return 0;
 }
