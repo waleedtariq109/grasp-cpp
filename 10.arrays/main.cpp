@@ -13,5 +13,14 @@ int main()
   }
   std::cout << std::endl;
 
+  // Change character in array
+  message[1] = 'a';
+  std::cout << "Message: ";
+  for (auto c : message)
+  {
+    std::cout << c;
+  }
+  std::cout << std::endl;
+
   return 0;
 }
