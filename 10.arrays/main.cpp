@@ -68,5 +68,12 @@ int main()
   std::cout << "sizeof() Message5: " << sizeof(message5) << std::endl;
   std::cout << "Message5: " << message5 << std::endl;
 
+  std::cout << std::endl;
+
+  // Print number in std::cout
+
+  int numbers[]{1, 2, 3, 4, 5, 6};
+  std::cout << "Numbers: " << numbers << std::endl; // This will print memory address in hex format
+
   return 0;
 }
