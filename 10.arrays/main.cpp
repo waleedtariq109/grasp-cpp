@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
   // Generating Random number
 
   /**
@@ -12,13 +11,19 @@ int main()
    * The RAND_MAX is already defines in standard C++ linrary
    */
 
-  int random_number = std::rand(); // 0 ~ RAND_MAX
+  int random_number = std::rand();  // 0 ~ RAND_MAX
   std::cout << "Random Number: " << random_number << std::endl;
 
   random_number = std::rand();
   std::cout << "Random Number: " << random_number << std::endl;
 
   std::cout << std::endl;
+
+  // Generating random number
+  for (size_t i{0}; i < 10; ++i) {
+    random_number = std::rand();
+    std::cout << "Random Number: " << random_number << std::endl;
+  }
 
   return 0;
 }
