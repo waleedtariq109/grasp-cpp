@@ -56,5 +56,17 @@ int main()
   char message4[]{'h', 'e', 'l', 'l', 'o', '\0'};
   std::cout << "sizeof() Message4: " << sizeof(message4) << std::endl;
   std::cout << "Message 4: " << message4 << std::endl;
+
+  std::cout << std::endl;
+
+  // String literals
+  /**
+   * The string literals are null terminated by the compiler
+   */
+
+  char message5[]{"Hello Babay how are you doing"};
+  std::cout << "sizeof() Message5: " << sizeof(message5) << std::endl;
+  std::cout << "Message5: " << message5 << std::endl;
+
   return 0;
 }
