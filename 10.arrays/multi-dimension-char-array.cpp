@@ -18,5 +18,32 @@ int main() {
   for (size_t i = 0; i < std::size(members); ++i) {
     std::cout << members[i] << std::endl;
   }
+
+  std::cout << std::endl;
+  std::cout << std::endl;
+
+  // Looping out each character manually or individually
+  for (size_t i = 0; i < std::size(members); ++i) {
+    for (size_t j = 0; j < std::size(members[i]); ++j) {
+      std::cout << members[i][j];
+    }
+    std::cout << std::endl;
+  }
+
+  // The better way is to use c strings literals
+  // This will ensure that the string is null terminated
+
+  std::cout << std::endl;
+  char member1[][name_length]{
+      "John",
+      "Samuel",
+      "Rashid",
+      "RodriguezRodri",
+  };
+  std::cout << "Printing out members 1 (C-String Literals) the more safer way" << std::endl;
+  for (size_t i = 0; i < std::size(member1); ++i) {
+    std::cout << member1[i] << std::endl;
+  }
+
   return 0;
 }
