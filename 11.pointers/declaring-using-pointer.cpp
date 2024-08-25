@@ -58,9 +58,18 @@ int main() {
 
   std::cout << std::endl;
 
+  /**
+   * Altough you can do that but this will cause confusion
+   * if junior developer looking at your code they might be thinking
+   * that p_number2 and other_var both are pointers
+   */
   int *p_number2{nullptr}, other_var{};
   std::cout << "sizeof(p_number2): " << sizeof(p_number2) << std::endl;  // 8 bytes
   std::cout << "sizeof(other_var): " << sizeof(other_var) << std::endl;  // 4 bytes
+
+  // Better way is to seperate these declaration on different lines
+  int* p_number3{nullptr};
+  int other_var1{};
 
   return 0;
 }
