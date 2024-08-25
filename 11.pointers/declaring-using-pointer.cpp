@@ -71,5 +71,14 @@ int main() {
   int* p_number3{nullptr};
   int other_var1{};
 
+  std::cout << std::endl;
+
+  // Declare a variable along with pointer variable and pont the pointer to that variable
+  int int_var{34};
+  int* p_int{&int_var};  // The `&` is address-of operator
+
+  std::cout << "int_var: " << int_var << std::endl;
+  std::cout << "p_int(address of int_var): " << p_int << std::endl;
+
   return 0;
 }
