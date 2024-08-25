@@ -177,9 +177,56 @@ int main() {
   std::cout << std::endl;
   for (size_t i = 0; i < std::size(packages2); ++i) {
     for (size_t j = 0; j < std::size(packages2[i]); ++j) {
-      std::cout << "packages[" << i << "][" << j << "]: " << packages2[i][j] << " ";
+      std::cout << "packages[" << i << "][" << j << "]: " << packages2[i][j] << std::endl;
     }
-    std::cout << std::endl;
+  }
+
+  /**
+   * One thing to keep in mind if you set the size of your multi dimensional array
+   * but not adding the enough element in array then the compiler will fill the
+   * rest of the remainig elements with 0;
+   */
+
+  int house_block2[][5][4]{
+      {
+          {1, 2, 3},
+          {4},
+          {7, 8, 9},
+          {10, 11, 12},
+          {13, 14, 15},
+
+      },
+      {
+          {16, 17, 18},
+          {19, 20, 21},
+          {22, 23, 24},
+          {25, 26, 27},
+          {28, 29, 30},
+      },
+      {
+          {31, 32, 33},
+          {34, 35, 36},
+          {37, 38, 39},
+          {40, 41, 42},
+          {43, 44, 45},
+      },
+      {
+          {46, 47, 48},
+          {49, 50, 51},
+          {52, 53, 54},
+          {55, 56, 57},
+      },
+  };
+
+  house_block2[0][1][0] = 10;
+
+  for (size_t i = 0; i < std::size(house_block2); ++i) {
+    for (size_t j = 0; j < std::size(house_block2[i]); ++j) {
+      for (size_t k = 0; k < std::size(house_block2[i][j]); ++k) {
+        std::cout << house_block2[i][j][k] << "  ";
+      }
+      std::cout << std::endl;
+    }
   }
 
   return 0;
