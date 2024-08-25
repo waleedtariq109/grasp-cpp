@@ -32,15 +32,8 @@ int main() {
   int packages[3][4]{
       {1, 2, 3, 4},
       {5, 6, 7, 8},
-      {9, 8, 7, 6},
+      {9, 10, 11, 12},
   };
-
-  for (size_t i = 0; i < 3; ++i) {
-    for (size_t j = 0; j < 4; ++j) {
-      std::cout << packages[i][j] << "  ";
-    }
-    std::cout << std::endl;
-  }
 
   /**
    * i = 0, is 0 less then 3: YES
@@ -55,6 +48,47 @@ int main() {
     packages[0][0] -> 1
 
    */
+
+  for (size_t i = 0; i < 3; ++i) {
+    for (size_t j = 0; j < 4; ++j) {
+      std::cout << packages[i][j] << "  ";
+    }
+    std::cout << std::endl;
+  }
+
+  std::cout << std::endl;
+  std::cout << std::endl;
+
+  /**
+   * The std::size(packages) on outer loop will give us the size of first dimension
+   *
+   * int packages[3][4]{
+        0: {1, 2, 3, 4},
+        1: {5, 6, 7, 8},
+        2: {9, 8, 7, 6},
+    };
+
+    So in the outer loop the size will be 3
+
+    The std::size(packages[i]) will give us the size of our 2nd dimension array
+
+    int packages[3][4]{
+        0: {1, 2, 3, 4},
+        1: {5, 6, 7, 8},
+        2: {9, 8, 7, 6},
+    };
+
+    packages[i] -> will return the array on each index so the std::size(packages[i])
+    will return the size of that array
+
+   */
+  // Use std::size to get the size of array dimensions
+  for (size_t i = 0; i < std::size(packages); ++i) {
+    for (size_t j = 0; j < std::size(packages[i]); ++j) {
+      std::cout << packages[i][j] << "  ";
+    }
+    std::cout << std::endl;
+  }
 
   return 0;
 }
