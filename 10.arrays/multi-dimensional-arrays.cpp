@@ -20,7 +20,7 @@ int main() {
    * 12 * 4 = 48 bytes
    */
 
-  int packages[3][4];  // Size of array is 48 bytes in memory
+  // int packages[3][4];  // Size of array is 48 bytes in memory
 
   // Read data from 2D array
   /**
@@ -29,11 +29,32 @@ int main() {
    * is reading the 2nd dimensional data
    */
 
+  int packages[3][4]{
+      {1, 2, 3, 4},
+      {5, 6, 7, 8},
+      {9, 8, 7, 6},
+  };
+
   for (size_t i = 0; i < 3; ++i) {
     for (size_t j = 0; j < 4; ++j) {
       std::cout << packages[i][j] << "  ";
     }
+    std::cout << std::endl;
   }
+
+  /**
+   * i = 0, is 0 less then 3: YES
+   * j = 0, is 0 less then 4: YES
+   *
+   * int packages[3][4]{
+        {1, 2, 3, 4},
+        {5, 6, 7, 8},
+        {9, 8, 7, 6},
+    };
+
+    packages[0][0] -> 1
+
+   */
 
   return 0;
 }
