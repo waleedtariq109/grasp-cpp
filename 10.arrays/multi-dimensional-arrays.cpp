@@ -155,5 +155,32 @@ int main() {
     }
   }
 
+  // Omit the size of an array
+  /**
+   * We can only omit 1st or left most dimension and compiler will deduce the size of 1st diemension
+   * of our multi dimensional array
+   *
+   * If we set a size in another varible we have to make the variable const otherwise we will
+   * get a compiler error.
+   */
+
+  const size_t num_cols{3};
+  int packages2[][num_cols]{
+      {1, 2, 3},
+      {4, 5, 6},
+      {7, 8, 9},
+      {10, 11, 12},
+  };
+
+  std::cout << std::endl;
+  std::cout << "Omiting size of the left most 2d array" << std::endl;
+  std::cout << std::endl;
+  for (size_t i = 0; i < std::size(packages2); ++i) {
+    for (size_t j = 0; j < std::size(packages2[i]); ++j) {
+      std::cout << "packages[" << i << "][" << j << "]: " << packages2[i][j] << " ";
+    }
+    std::cout << std::endl;
+  }
+
   return 0;
 }
