@@ -80,5 +80,32 @@ int main() {
   std::cout << "int_var: " << int_var << std::endl;
   std::cout << "p_int(address of int_var): " << p_int << std::endl;
 
+  std::cout << std::endl;
+
+  // You can also change the address in a pointer
+  int int_var1{88};
+  p_int = &int_var1;  // Assign a different address to the pointer
+  std::cout << "p_int(address of int_var): " << p_int << std::endl;
+
+  std::cout << std::endl;
+
+  // We cannot cross assign between pointers of different types
+  int* p_int1{nullptr};
+  double double_var{33.45};
+
+  // p_int1 = &double_var; // This will give compiler error
+
+  std::cout << std::endl;
+
+  // Dereferencing a pointer
+  /**
+   * Dereferencing a pointer means reads the data which is stored in that memory address
+   */
+  int* p_int2{nullptr};
+  int int_data{77};
+  p_int2 = &int_data;
+
+  std::cout << "Reading ptr data: " << *p_int2 << std::endl;
+
   return 0;
 }
