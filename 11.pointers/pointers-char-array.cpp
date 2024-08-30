@@ -17,7 +17,8 @@ int main() {
       "you yelling at your boss. And oh no! You get fired!",
       "you laughing your lungs out. I've never seen this before.",
       ", huum, I don't see anything",
-      "you drinking wine"};
+      "you drinking wine",
+  };
 
   bool end{false};
 
