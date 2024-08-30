@@ -5,7 +5,7 @@ int main() {
   // srand() has to run once per program run
   std::srand(std::time(0));  // Seed
 
-  char predictions[][90]{
+  const char *predictions[]{
       "a lot of kinds running in the backyard!",
       "a lot of empty beer bootles on your work table.",
       "you Partying too much with kids wearing weird clothes.",
