@@ -105,7 +105,7 @@ int main() {
   int int_data{77};
   p_int2 = &int_data;
 
-  std::cout << "Reading ptr data: " << *p_int2 << std::endl;
+  std::cout << "Reading pointer data: " << *p_int2 << std::endl;
 
   return 0;
 }
