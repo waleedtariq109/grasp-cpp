@@ -53,5 +53,15 @@ int main() {
   std::cout << "*p_number1: " << *p_number1 << std::endl;
   std::cout << "number1: " << number1 << std::endl;
 
+  printEmptyLines(2);
+
+  // Example 4: Change the pointer itself to make it point somewhere else
+  std::cout << "Change the pointer itself to make it point somewhere else" << std::endl;
+  int num_var{33};
+  p_number1 = &num_var;
+  std::cout << "p_number1: " << p_number1 << std::endl;
+  std::cout << "*p_number1: " << *p_number1 << std::endl;
+  std::cout << "num_var: " << num_var << std::endl;
+
   return 0;
 }
