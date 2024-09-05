@@ -23,5 +23,17 @@ int main() {
   std::cout << "number: " << number << std::endl;
   std::cout << "*number: " << &number << std::endl;
 
+  printEmptyLines(2);
+
+  // Pointer: We can modify the and also point this to somewhere else
+  int *p_number1{nullptr};
+  int number1{23};
+
+  p_number1 = &number1;
+  std::cout << "Pointer and value pointed to - BOTH MODIFIABLE -" << std::endl;
+  std::cout << "p_number1: " << p_number1 << std::endl;
+  std::cout << "*p_number1: " << *p_number1 << std::endl;
+  std::cout << "number1: " << number1 << std::endl;
+
   return 0;
 }
