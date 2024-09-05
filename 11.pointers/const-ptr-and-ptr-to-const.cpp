@@ -31,18 +31,18 @@ int main() {
 
   p_number1 = &number1;
   std::cout << "Pointer and value pointed to - BOTH MODIFIABLE -" << std::endl;
-  std::cout << "p_number1: " << p_number1 << std::endl;
-  std::cout << "*p_number1: " << *p_number1 << std::endl;
-  std::cout << "number1: " << number1 << std::endl;
+  std::cout << "p_number1: " << p_number1 << std::endl;    // Address: 0x....
+  std::cout << "*p_number1: " << *p_number1 << std::endl;  // D-REF: Value - 23
+  std::cout << "number1: " << number1 << std::endl;        // Value of number1 - 23
 
   printEmptyLines(2);
 
   // Change the value through pointer
   std::cout << "Modify the value pointed to p_number1 through the pointer" << std::endl;
   *p_number1 = 432;
-  std::cout << "p_number1: " << p_number1 << std::endl;
-  std::cout << "*p_number1: " << *p_number1 << std::endl;
-  std::cout << "number1: " << number1 << std::endl;
+  std::cout << "p_number1: " << p_number1 << std::endl;    // Address: 0x....
+  std::cout << "*p_number1: " << *p_number1 << std::endl;  // D-REF: Value - 432
+  std::cout << "number1: " << number1 << std::endl;        // Value of number1 which is now 432
 
   printEmptyLines(2);
 
@@ -50,9 +50,9 @@ int main() {
   std::cout << "Chaning the pointer to point somewhere else" << std::endl;
   int number2{99};
   p_number1 = &number2;
-  std::cout << "p_number1: " << p_number1 << std::endl;
-  std::cout << "*p_number1: " << *p_number1 << std::endl;
-  std::cout << "number2: " << number2 << std::endl;
+  std::cout << "p_number1: " << p_number1 << std::endl;    // Address: 0x....
+  std::cout << "*p_number1: " << *p_number1 << std::endl;  // D-REF: Value - 99
+  std::cout << "number2: " << number2 << std::endl;        // Value of number 2 - 99
 
   printEmptyLines(2);
 
