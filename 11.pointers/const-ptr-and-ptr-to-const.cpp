@@ -25,6 +25,8 @@ int main() {
 
   printEmptyLines(2);
 
+  // ? Non const pointer to the non const data
+
   // Pointer: We can modify the and also point this to somewhere else
   int *p_number1{nullptr};
   int number1{23};
@@ -55,6 +57,16 @@ int main() {
   std::cout << "number2: " << number2 << std::endl;        // Value of number 2 - 99
 
   printEmptyLines(2);
+
+  /**
+   * Pointer to const
+   *
+   * Pointer pointing to const data which means we can cannot change the
+   * through the pointer
+   */
+
+  std::cout << "Pointer is modifiable but the pointed value is const" << std::endl;
+  int number3{635};
 
   return 0;
 }
