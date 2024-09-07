@@ -66,7 +66,7 @@ int main() {
    */
 
   std::cout << "Pointer is modifiable but the pointed value is const" << std::endl;
-  int number3{635};
+  int number3{637};
 
   return 0;
 }
