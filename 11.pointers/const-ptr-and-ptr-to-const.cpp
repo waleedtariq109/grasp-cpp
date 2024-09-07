@@ -66,7 +66,32 @@ int main() {
    */
 
   std::cout << "Pointer is modifiable but the pointed value is const" << std::endl;
-  int number3{637};
+  int number3{635};
+  const int *p_number2{&number3};  // Can't modify the number3 through p_number2
+  /**
+   * We can't change number3 with p_number2 pointer but if number3 is also a const then alway add
+   * const keyword with them explictly to make your intensions clear.
+   *
+   * In simple words const int *p means the pointer itself is const but the
+   * it's pointed is maybe const or maybe non const
+   */
+  std::cout << "p_number2: " << p_number2 << std::endl;
+  std::cout << "*p_number2: " << *p_number2 << std::endl;
+
+  // If we trying to modify the number3 through pointer we will get an error
+  printEmptyLines(1);
+  std::cout << "Modifying the value pointed to by p_number2 pointer" << std::endl;
+  //! *p_number2 = 999; //Compiler Error
+
+  /**
+   * Now as we know we can't change the data of varibale pointed to by
+   * p_number2 pointer but we can make this pointer to point somewhere else
+   */
+
+  int number4{987};
+  p_number2 = &number4;
+  std::cout << "p_number2: " << p_number2 << std::endl;
+  std::cout << "*p_number2: " << *p_number2 << std::endl;
 
   return 0;
 }
