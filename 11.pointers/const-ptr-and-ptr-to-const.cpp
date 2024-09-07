@@ -67,7 +67,7 @@ int main() {
 
   std::cout << "Pointer is modifiable but the pointed value is const" << std::endl;
   int number3{635};
-  const int *p_number2{&number3};  // Can't modify the number3 through p_number2
+  const int *p_number2{&number3};  // Pointer to const
   /**
    * We can't change number3 with p_number2 pointer but if number3 is also a const then alway add
    * const keyword with them explictly to make your intensions clear.
@@ -93,5 +93,39 @@ int main() {
   std::cout << "p_number2: " << p_number2 << std::endl;
   std::cout << "*p_number2: " << *p_number2 << std::endl;
 
+  /**
+   * There is another thing which i want to make clear is
+   * add const keyword before or after int in pointer is same
+   * there is no difference in there
+   */
+
+  int number5{10};
+  int const *p_number3{&number5};  // Pointer to const
+
+  std::cout << "number5: " << number5 << std::endl;
+  std::cout << "p_number3: " << p_number3 << std::endl;
+  std::cout << "*p_number3: " << *p_number3 << std::endl;
+
+  /**
+   * If we are trying to modifying the value of number5 through pointer
+   * we will get an compiler error even tough the number5 itself is not
+   * const but when we define a variable like this:
+   *
+   * int const *p_number3{&number5};
+   * or
+   * const int *p_number3{&number5};
+   *
+   * This means this pointer is point to the const. So the compiler will think
+   * the value pointed to is const so it won't let us to change or modify the
+   * value through pointer.
+   *
+   */
+
+  //! Compiler error
+  // *p_number3 = 88;
+
+  // Altough we can direcrtly change the number5
+  number5 = 99;
+  std::cout << "number5: " << number5 << std::endl;
   return 0;
 }
