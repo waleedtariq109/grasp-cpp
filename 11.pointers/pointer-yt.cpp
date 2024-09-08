@@ -113,5 +113,23 @@ int main() {
   int number2{96};
   // pointer = &number2; // Compiler Error
 
+  /**
+   * This also means pointer to a const int
+   */
+
+  int var{99};
+  const int const *ptr{nullptr};
+  ptr = &var;
+  int var2{9};
+  ptr = &var2;
+
+  //------------------------------
+
+  int var3{44};
+  const int *const ptr1{&var3};
+  // *ptr = 98;
+  int var4{98};
+  ptr = &var4;
+
   return 0;
 }
