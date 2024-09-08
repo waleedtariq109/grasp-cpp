@@ -37,5 +37,60 @@ int main() {
 
   std::cout << std::endl;
 
+  /**
+   * Let's say i have a const_int. So can i point a non const pointer
+   * to a const int. Let's find out
+   */
+  //! non_const_p = &const_int; // You can't do that.
+
+  /**
+   * What this means?
+   * const int *const_int_p{nullptr};
+   *
+   * This simply means it's a pointer to a const integer.
+   * Maybe the variable which you are pointing to is non const
+   *
+   * Weather the variable is a const or non const but when you say
+   * This pointer points to a const integer which means you can't
+   * change the value of that variable through pointer. If the
+   * varibale is non const i may change the value directly but
+   * i can't change the value through pointer.
+   *
+   */
+
+  int const_int_maybe{10};
+  const int *const_int_p{nullptr};
+  const_int_p = &const_int_maybe;
+
+  std::cout << "const_int_maybe: " << const_int_maybe << std::endl;
+  std::cout << "const_int_p pointing to the address of const_int_maybe: " << const_int_p << std::endl;
+
+  // *const_int_p = 98;
+  const_int_maybe = 87;
+  std::cout << "const_int_maybe: " << const_int_maybe << std::endl;
+
+  // Altough you can't change the value of const_int_maybe through pointer
+  // but you can change the address of const_int_p and point it to somewhere
+  // else
+
+  int num{88};
+  const_int_p = &num;
+  std::cout << "const_int_p: " << const_int_p << std::endl;
+
+  std::cout << std::endl;
+
+  /**
+   *
+   * If you see the const keyword after the int then this will serve the same
+   * purpose as well like there no difference.
+   *
+   */
+
+  int int_var{78};
+  int const *cost_p{&int_var};
+
+  // This will also doing the same this.
+  // pointer to a const
+
   return 0;
 }
