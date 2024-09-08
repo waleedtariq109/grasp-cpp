@@ -92,5 +92,26 @@ int main() {
   // This will also doing the same this.
   // pointer to a const
 
+  /**
+   * int *const p;
+   *
+   * This means it's a const pointer to a non const int.
+   * We can modify the value of `number` through pointer
+   * but we can't make this pointer to somewhere else because it's
+   * a const pointer to a non const int.
+   *
+   */
+
+  int number{69};
+  int *const pointer{&number};
+
+  std::cout << "Address of number: " << pointer << std::endl;
+  std::cout << "*pointer: " << *pointer << std::endl;
+  *pointer = 98;
+  std::cout << "*pointer: " << *pointer << std::endl;
+
+  int number2{96};
+  // pointer = &number2; // Compiler Error
+
   return 0;
 }
