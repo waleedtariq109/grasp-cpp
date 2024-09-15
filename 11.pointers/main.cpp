@@ -91,5 +91,23 @@ int main() {
   std::cout << "sizeof(p_number): " << sizeof(p_number) << "bytes" << std::endl;
   std::cout << "sizeof(p_fractional_number): " << sizeof(p_fractional_number) << "bytes" << std::endl;
 
+  std::cout << std::endl;
+  std::cout << std::endl;
+
+  // Initialize the pointer and assigning the data
+  int int_var{44};
+  int *p_int{&int_var};  // `&` is address of operator
+
+  std::cout << "int_var: " << int_var << std::endl;
+  std::cout << "p_int: " << p_int << std::endl;
+
+  // We can also change a address stored in a pointer at anytime
+  int int_var1{98};
+  p_int = &int_var1;
+  std::cout << "p_int: " << p_int << std::endl;
+
+  std::cout << std::endl;
+  std::cout << std::endl;
+
   return 0;
 }
