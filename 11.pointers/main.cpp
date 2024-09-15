@@ -106,6 +106,13 @@ int main() {
   p_int = &int_var1;
   std::cout << "p_int: " << p_int << std::endl;
 
+  // Dereferencing a pointer
+  int linkedin_followers{1226};
+  int *linkedin_followers_pointer{nullptr};
+  linkedin_followers_pointer = &linkedin_followers;
+
+  std::cout << "Reading data through pointer (followers): " << *linkedin_followers_pointer << std::endl;
+
   std::cout << std::endl;
   std::cout << std::endl;
 
