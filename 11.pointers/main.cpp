@@ -107,7 +107,7 @@ int main() {
   std::cout << "p_int: " << p_int << std::endl;
 
   // Dereferencing a pointer
-  int linkedin_followers{1226};
+  int linkedin_followers{1227};
   int *linkedin_followers_pointer{nullptr};
   linkedin_followers_pointer = &linkedin_followers;
 
