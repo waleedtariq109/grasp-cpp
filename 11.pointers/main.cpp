@@ -113,6 +113,10 @@ int main() {
 
   std::cout << "Reading data through pointer (followers): " << *linkedin_followers_pointer << std::endl;
 
+  // We can also assign the value to a pointer by derefferening it
+  *linkedin_followers_pointer = 1228;
+  std::cout << "Reading data through pointer (followers): " << *linkedin_followers_pointer << std::endl;
+
   std::cout << std::endl;
   std::cout << std::endl;
 
