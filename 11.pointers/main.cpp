@@ -5,7 +5,5 @@ int main() {
   std::cout << "Pointers to chars" << std::endl;
   std::cout << std::endl;
 
-  //
-
   return 0;
 }
