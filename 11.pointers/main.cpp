@@ -117,6 +117,10 @@ int main() {
   *linkedin_followers_pointer = 1228;
   std::cout << "Reading data through pointer (followers): " << *linkedin_followers_pointer << std::endl;
 
+  // If we are assign a new value to pointer without derefferencing then we will get compiler error
+
+  // linkedin_followers_pointer = 1229; //->Compiler error
+
   std::cout << std::endl;
   std::cout << std::endl;
 
