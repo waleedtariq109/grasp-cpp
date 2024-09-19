@@ -32,6 +32,27 @@ int main() {
   const char *message{"Hello!"};
   std::cout << "Message: " << message << std::endl;
 
+  /**
+   * If we dereference the pointer, we will get 'H',
+   * not the entire string. The reason is that in C++,
+   * strings are stored as an array of characters, and
+   * pointers store one address at a time. Since each
+   * element of the array has a different address, the
+   * pointer points to 'H', the first element of the character array.
+   */
+
+  std::cout << "message(dereference): " << *message << std::endl;
+
+  // If we try to change the value through pointer then we will get an error
+
+  // *message = 'B'; //-> Compiler Error
+
+  // Altough We can change the address of a pointer without any error
+  char char_var{'U'};
+  message = &char_var;
+
+  std::cout << "Message: " << *message << std::endl;
+
   std::cout << std::endl;
 
   return 0;
