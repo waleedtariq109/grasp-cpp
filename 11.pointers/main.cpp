@@ -16,7 +16,7 @@ int main() {
     std::cout << student << std::endl;
   }
 
-  // *students[0] 'K'; // Compiler Error
+  // *students[0] 'K'; //-> Compiler Error
 
   const char *new_student{"Bob the great"};
   // students[0] = new_student;
