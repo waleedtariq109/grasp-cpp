@@ -41,5 +41,8 @@ int main() {
 
   std::cout << "p_score: " << p_score << std::endl;
 
-    return 0;
+  std::cout << "size: " << std::size(scores) << std::endl;
+  // std::cout << "size: " << std::size(p_score) << std::endl; // Error
+
+  return 0;
 }
