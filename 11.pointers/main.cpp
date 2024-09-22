@@ -26,5 +26,20 @@ int main() {
   std::cout << "*p_score: " << *p_score << std::endl;
   std::cout << "p_score[0]: " << p_score[0] << std::endl;
 
-  return 0;
+  // Difference
+  int number{87};
+  // scores = &number; //Compiler Error
+  /**
+   * The reason for this error is the array name scores
+   * is a constant pointer to the firt element of the array
+   */
+  p_score = &number;  // This will work
+  /**
+   * Because we will assign a address of number to a
+   * pointer
+   */
+
+  std::cout << "p_score: " << p_score << std::endl;
+
+    return 0;
 }
