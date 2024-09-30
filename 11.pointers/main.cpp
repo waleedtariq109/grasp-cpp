@@ -17,5 +17,7 @@ int main() {
   for (size_t i{0}; i < std::size(array_2); ++i) {
     array_1[i] = array_2[i];
   }
+
+  int *temp_ptr{nullptr};
   return 0;
 }
