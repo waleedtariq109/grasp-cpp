@@ -18,6 +18,5 @@ int main() {
     array_1[i] = array_2[i];
   }
 
-  int *temp_ptr{nullptr};
   return 0;
 }
