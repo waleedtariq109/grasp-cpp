@@ -18,22 +18,31 @@ int main() {
 
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   ++p_scores;
+
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
   return 0;
 }
