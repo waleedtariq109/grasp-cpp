@@ -67,5 +67,16 @@ int main() {
     std::cout << "Address: " << p_scores + i << " Value: " << *(p_scores + i) << std::endl;
   }
 
+  /**
+   * We can also do arithmetic on array name just like any pointer
+   */
+
+  std::cout << std::endl;
+  p_scores = scores;  // Reset the pointer
+  std::cout << "Pointer arithmetic on array name" << std::endl;
+  for (size_t i{0}; i < std::size(scores); ++i) {
+    std::cout << "Address: " << p_scores + i << " Value: " << *(scores + i) << std::endl;
+  }
+
   return 0;
 }
