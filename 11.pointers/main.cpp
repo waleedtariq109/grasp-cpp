@@ -85,5 +85,13 @@ int main() {
     std::cout << "Address: " << (p_scores + i - 1) << " Value: " << *(p_scores + i - 1) << std::endl;
   }
 
+  // Print in reverse order with -- operator on p_score
+  std::cout << std::endl;
+  std::cout << "Elements in reverse order -- arithmetic on the p-scores pointer" << std::endl;
+  p_scores = scores + std::size(scores) - 1;
+  for (size_t i{std::size(scores)}; i > 0; --i) {
+    std::cout << "Address: " << p_scores + i << " Value: " << *(p_scores--) << std::endl;
+  }
+
   return 0;
 }
