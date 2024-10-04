@@ -78,5 +78,12 @@ int main() {
     std::cout << "Address: " << p_scores + i << " Value: " << *(scores + i) << std::endl;
   }
 
+  // Print element in reverse order
+  std::cout << std::endl;
+  std::cout << "Print array element in reverse order with decrementing pointer arithmetic" << std::endl;
+  for (size_t i{std::size(scores)}; i > 0; --i) {
+    std::cout << "Address: " << (p_scores + i - 1) << " Value: " << *(p_scores + i - 1) << std::endl;
+  }
+
   return 0;
 }
