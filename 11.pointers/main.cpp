@@ -100,5 +100,20 @@ int main() {
     std::cout << "Value: " << scores[i - 1] << std::endl;
   }
 
+  /**
+   * We can also modify the value using pointer arithmetic
+   */
+
+  std::cout << std::endl;
+  p_scores = scores;  // Reset the pointer
+  scores[0] = 31;
+  *(scores + 1) = 32;
+  *(p_scores + 2) = 33;
+
+  std::cout << "Print array after modification of the first 3 element" << std::endl;
+  for (size_t i{0}; i < std::size(scores); ++i) {
+    std::cout << "Value: " << scores[i] << std::endl;
+  }
+
   return 0;
 }
