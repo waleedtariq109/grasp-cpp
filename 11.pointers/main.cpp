@@ -93,5 +93,12 @@ int main() {
     std::cout << "Address: " << p_scores + i << " Value: " << *(p_scores--) << std::endl;
   }
 
+  // Print in reverse order with array index
+  std::cout << std::endl;
+  std::cout << "Element in reverse order with array index notation" << std::endl;
+  for (size_t i{std::size(scores)}; i > 0; --i) {
+    std::cout << "Value: " << scores[i - 1] << std::endl;
+  }
+
   return 0;
 }
