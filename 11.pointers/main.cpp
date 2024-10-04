@@ -44,5 +44,28 @@ int main() {
   ++p_scores;
 
   std::cout << "Address: " << p_scores << " Value: " << *(p_scores) << std::endl;
+
+  /**
+   * We can also increment the pointer by explicit integer
+   */
+
+  std::cout << std::endl;
+  std::cout << "Explicit addition of integer" << std::endl;
+  p_scores = scores;                                           // Reset the p_score pointer
+  std::cout << "scores[4]: " << *(p_scores + 4) << std::endl;  // move forward by 4*sizeof(int)
+
+  /**
+   * In the first example we are manually increment pointer and print it out.
+   * But as we know we have loops in c++ so what we can do is to use loops
+   * which is more readable and easier.
+   */
+
+  std::cout << std::endl;
+  p_scores = scores;  // Reset the pointer
+  std::cout << "Pointer Arithmetic on p_score pointer and a for loop" << std::endl;
+  for (size_t i{0}; i < std::size(scores); ++i) {
+    std::cout << "Address: " << p_scores + i << " Value: " << *(p_scores + i) << std::endl;
+  }
+
   return 0;
 }
