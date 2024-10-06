@@ -89,5 +89,50 @@ int main() {
   delete p_number4;
   p_number4 = nullptr;
 
+  std::cout << std::endl;
+
+  /**
+   * It is also possible to initialize a pointer with a valid address
+   * upon declaration.
+   */
+
+  int *p_number5{new int};      // Contain junk address
+  int *p_number6{new int(22)};  // Direct initialization
+  int *p_number7{new int{23}};  // Uniform initialization
+
+  std::cout << "Initialize with a valid memory address at declaration" << std::endl;
+
+  std::cout << "p_number5: " << p_number5 << std::endl;
+  std::cout << "*p_number5: " << *p_number5 << std::endl;  // Junk value
+
+  std::cout << "p_number6: " << p_number6 << std::endl;
+  std::cout << "*p_number6: " << *p_number6 << std::endl;
+
+  std::cout << "p_number7: " << p_number7 << std::endl;
+  std::cout << "*p_number7: " << *p_number7 << std::endl;
+
+  // Releasing the memory
+  delete p_number5;
+  delete p_number6;
+  delete p_number7;
+
+  p_number5 = nullptr;
+  p_number6 = nullptr;
+  p_number7 = nullptr;
+
+  std::cout << std::endl;
+
+  /**
+   * We can reuse the pointer even after we release it
+   * because we release the memory which it point to but
+   * the pointer variable is still available for our use
+   */
+
+  p_number7 = new int(81);
+  std::cout << std::endl;
+  std::cout << *p_number7 << std::endl;
+  delete p_number7;
+  p_number7 = nullptr;
+
   return 0;
 }
