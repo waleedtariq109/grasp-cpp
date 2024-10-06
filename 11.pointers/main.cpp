@@ -134,5 +134,15 @@ int main() {
   delete p_number7;
   p_number7 = nullptr;
 
+  // Avoid deleting the pointer twice
+  int *pointer = new int(76);
+  std::cout << *pointer << std::endl;
+
+  delete pointer;
+  pointer = nullptr;
+  delete pointer;
+
+  std::cout << "END" << std::endl;
+
   return 0;
 }
