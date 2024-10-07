@@ -132,5 +132,48 @@ int main() {
 
   std::cout << std::endl;
 
+  /**
+   * * SOLUTION
+   */
+
+  int *masterPointer1{new int{56}};
+  int *slavePointer1{masterPointer1};
+
+  std::cout << "master pointer: " << *masterPointer1 << std::endl;
+  std::cout << "slave pointer: " << *slavePointer1 << std::endl;
+
+  // When we deallocate the masterpointer we have to reset it along with it's slave pointer
+  delete masterPointer1;
+  masterPointer1 = nullptr;
+  slavePointer1 = nullptr;
+
+  std::cout << std::endl;
+
+  /**
+   * After we reset our all the pointers if we try to dereference these pointers
+   * we will get an segmentation fault error
+   */
+
+  // Alternatively we can check if pointer is pointing to a valid address before performing any op
+
+  masterPointer1 = new int(99);
+  slavePointer1 = masterPointer1;
+
+  delete slavePointer1;  // It is mandotary to delete the pointer
+  slavePointer1 = nullptr;
+
+  /**
+   * If we don't delete the pointer before resetting it we lose access
+   * to the allocated memory on heap but the main is we just lose access
+   * of the allocated memory but the allocated memory is stil there on
+   * heap which leads to the memory leaks
+   */
+
+  if (slavePointer1 != nullptr) {
+    std::cout << "slave pointer: " << *slavePointer1 << std::endl;
+  } else {
+    std::cout << "This pointer is pointing to invalid memory address" << std::endl;
+  }
+
   return 0;
 }
