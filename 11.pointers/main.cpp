@@ -81,15 +81,56 @@ int main() {
    * * SOLUTION
    */
 
+  /**
+   * The reason program will might crash because we are trying to dereferenicng
+   * the nullptr
+   */
+
   int *deletedPointer1{new int{88}};
   std::cout << "*deletedPointer1 - Before Deleted: " << *deletedPointer1 << std::endl;
   delete deletedPointer1;
   deletedPointer1 = nullptr;
   // std::cout << "*deletedPointer1 - After Deleted: " << *deletedPointer1 << std::endl;  // Program will crash
+  std::cout << std::endl;
+
   /**
-   * The reason program will might crash because we are trying to dereferenicng
-   * the nullptr
+   *
+   * Case #3: Multiple pointers pointing to the same address
+   *
+   * In this case let's say we have two pointer pointed to the same address
+   * So we have to set owner first and by owner i mean a master pointer and
+   * if master pointer is deallocated the memory then the other slave pointer
+   * should deallocate the memory because all the slave pointer will point to
+   * the master pointer and if master pointer deallocates the memory then the
+   * all the other salve pointer will would become a dangling pointer becasue
+   * in dynamic memory allocation once we occupy the memory we have to release
+   * it to as well and since the master pointer deallocate the memory this doesn't mean
+   * all the slave pointer will also deallocate the memory because all the slave pointer
+   * will point to the same address as masterPointer but not point to the masterPointer
+   * that's why once we deallocate the masterPointer we have to deallocate the other
+   * slaves pointer too.
+   *
+   * SOLUTION:
+   * When we deallocate the masterPointer we have to deallocate the all the
+   * slaves pointer too manually and we also have to add a check like if our
+   * masterPointer not point to the nullptr then we perform operation on slave
+   * pointer and same goes for the master pointer too.
+   *
    */
+
+  int *masterPointer{new int{83}};   // Master pointer
+  int *slavePointer{masterPointer};  // Slave pointer
+
+  std::cout << "masterPointer: " << masterPointer << ", *masterPointer: " << *masterPointer << std::endl;
+  std::cout << "slavePointer: " << slavePointer << ", *slavePointer: " << *slavePointer << std::endl;
+
+  // Deleting master pointer
+  delete masterPointer;
+  std::cout << "After deleting the master pointer" << std::endl;
+
+  std::cout << "slavePointer: " << slavePointer << ", *slavePointer: " << *slavePointer << std::endl;
+
+  std::cout << std::endl;
 
   return 0;
 }
