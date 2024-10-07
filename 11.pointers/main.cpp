@@ -87,7 +87,7 @@ int main() {
   deletedPointer1 = nullptr;
   // std::cout << "*deletedPointer1 - After Deleted: " << *deletedPointer1 << std::endl;  // Program will crash
   /**
-   * The reason program will crash because we are trying to dereferenicng
+   * The reason program will might crash because we are trying to dereferenicng
    * the nullptr
    */
 
