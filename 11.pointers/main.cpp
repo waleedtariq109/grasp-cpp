@@ -38,5 +38,26 @@ int main() {
     std::cerr << "Something went wrong: " << err.what() << std::endl;
   }
 
+  // std::nothrow
+  /**
+   * When the memory allocation is failed then the std::nothrow
+   * will return a nullptr instead of heap memory address
+   *
+   * It happens because the new keyword is an operator, specifically
+   * the memory allocation operator. When new fails due to a bad allocation,
+   * it normally throws a std::bad_alloc exception by default. However,
+   * we can modify this behavior to prevent throwing an exception
+   * by simply passing std::nothrow as an argument to the new operator.
+   * We are able to pass an argument to an operator due to operator overloading in C++.
+   */
+  for (size_t i{0}; i < 10; ++i) {
+    int* data = new (std::nothrow) int[1000000000000000];
+    if (data != nullptr) {
+      std::cout << "Data is allocated successfully" << std::endl;
+    } else [[likely]] {
+      std::cout << "Data is not allocated" << std::endl;
+    }
+  }
+
   return 0;
 }
