@@ -19,5 +19,15 @@ int main() {
   std::cout << "C is alphanumeric: " << std::isalnum('C') << std::endl;
   std::cout << "^ is alphanumeric: " << std::isalnum('^') << std::endl;
 
+  std::cout << std::endl;
+
+  // We can also use std::isalnum as a test
+  char character{'*'};
+  if (std::isalnum(character)) {
+    std::cout << character << " is an alphanumeric character" << std::endl;
+  } else [[likely]] {
+    std::cout << character << " is not an alphanumeric character" << std::endl;
+  }
+
   return 0;
 }
