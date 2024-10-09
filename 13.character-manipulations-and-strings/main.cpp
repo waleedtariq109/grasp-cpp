@@ -41,5 +41,15 @@ int main() {
   std::cout << "^ is alphabetic: " << std::isalpha('^') << std::endl;
   std::cout << "7 is alphabetic: " << std::isalpha('7') << std::endl;
 
+  std::cout << std::endl;
+
+  // Test if char isalpha
+  char char1{'A'};
+  if (std::isalpha(char1)) [[likely]] {
+    std::cout << char1 << " is aplhabetic character" << std::endl;
+  } else {
+    std::cout << char1 << " is non-alphabetic character" << std::endl;
+  }
+
   return 0;
 }
