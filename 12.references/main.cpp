@@ -41,5 +41,12 @@ int main() {
   }
   std::cout << std::endl;
 
+  /**
+   * You're using a reference (int& score), which means that during each iteration,
+   * score is not a copy of the element in the array; it's a reference to the actual
+   * element in the array. As a result, any modification to score directly affects
+   * the elements in the scores array.
+   */
+
   return 0;
 }
