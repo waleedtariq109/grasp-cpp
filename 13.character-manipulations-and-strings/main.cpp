@@ -54,8 +54,8 @@ int main() {
 
   // Check if character is blank
   char message[]{"Hello NUST, I'm Waleed Tariq a senior software engineer at GOOGLE"};
-  std::cout << message << std::endl;
-  int blankCount{};
+  std::cout << "Original String: " << message << std::endl;
+  size_t blankCount{};
   for (size_t i{0}; i < std::size(message); ++i) {
     if (std::isblank(message[i])) {
       std::cout << "Found a blank character at: " << "[" << i << "]" << std::endl;
@@ -64,6 +64,26 @@ int main() {
   }
   std::cout << "We have total " << blankCount << " character's" << std::endl;
   std::cout << std::endl;
+
+  // Check if character is uppercase or lowercase
+  char message1[]{"Hello NUST, I'm Waleed Tariq a senior software engineer at GOOGLE"};
+  size_t uppercaseCount{};
+  size_t lowercaseCount{};
+
+  std::cout << "Original String: " << message1 << std::endl;
+  for (size_t i{0}; i < std::size(message1); ++i) {
+    if (std::isupper(message1[i])) {
+      std::cout << "Found a uppercase character at: " << "[" << i << "]" << std::endl;
+      ++uppercaseCount;
+    } else if (std::islower(message1[i])) {
+      std::cout << "Found a lowercase character at: " << "[" << i << "]" << std::endl;
+      ++lowercaseCount;
+    }
+  }
+
+  std::cout << std::endl;
+  std::cout << "Total uppercase character's " << uppercaseCount << std::endl;
+  std::cout << "Total lowercase character's " << lowercaseCount << std::endl;
 
   return 0;
 }
