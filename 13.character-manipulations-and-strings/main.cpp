@@ -29,5 +29,17 @@ int main() {
     std::cout << character << " is not an alphanumeric character" << std::endl;
   }
 
+  std::cout << std::endl;
+
+  // Check if character is alphabetic
+  /**
+   * std::isalpha returns non-zero value if character is alphabetic
+   * and returns 0 is character is not alphabetic
+   */
+  std::cout << "Check if character is alphabetic (std::isalpha)" << std::endl;
+  std::cout << "C is alphabetic: " << std::isalpha('C') << std::endl;
+  std::cout << "^ is alphabetic: " << std::isalpha('^') << std::endl;
+  std::cout << "7 is alphabetic: " << std::isalpha('7') << std::endl;
+
   return 0;
 }
