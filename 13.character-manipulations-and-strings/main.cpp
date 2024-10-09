@@ -50,6 +50,20 @@ int main() {
   } else {
     std::cout << char1 << " is non-alphabetic character" << std::endl;
   }
+  std::cout << std::endl;
+
+  // Check if character is blank
+  char message[]{"Hello NUST, I'm Waleed Tariq a senior software engineer at GOOGLE"};
+  std::cout << message << std::endl;
+  int blankCount{};
+  for (size_t i{0}; i < std::size(message); ++i) {
+    if (std::isblank(message[i])) {
+      std::cout << "Found a blank character at: " << "[" << i << "]" << std::endl;
+      ++blankCount;
+    }
+  }
+  std::cout << "We have total " << blankCount << " character's" << std::endl;
+  std::cout << std::endl;
 
   return 0;
 }
