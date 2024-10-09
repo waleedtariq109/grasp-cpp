@@ -49,5 +49,34 @@ int main() {
   std::cout << "*ptrToDoubleVal: " << *ptrToDoubleVal << std::endl;
   std::cout << std::endl;
 
+  /**
+   * Once the reference is established then it cannot changed
+   * or reference to another variable
+   */
+
+  double otherDoubleVal{78.45};
+  refToDoubleVal = otherDoubleVal;
+
+  /**
+   * In the above example in refToDouble variable the value of
+   * otherDoubleVal is assigned no the reference of it.
+   */
+
+  std::cout << std::endl;
+  std::cout << "doubleVal: " << doubleVal << std::endl;
+  std::cout << "refToDoubleVal: " << refToDoubleVal << std::endl;
+  std::cout << "ptrToDoubleVal: " << ptrToDoubleVal << std::endl;
+  std::cout << "*ptrToDoubleVal: " << *ptrToDoubleVal << std::endl;
+  std::cout << std::endl;
+
+  otherDoubleVal = 8898.98;  // The value of refToDoubleVal will not change
+
+  std::cout << std::endl;
+  std::cout << "doubleVal: " << doubleVal << std::endl;
+  std::cout << "refToDoubleVal: " << refToDoubleVal << std::endl;
+  std::cout << "ptrToDoubleVal: " << ptrToDoubleVal << std::endl;
+  std::cout << "*ptrToDoubleVal: " << *ptrToDoubleVal << std::endl;
+  std::cout << std::endl;
+
   return 0;
 }
