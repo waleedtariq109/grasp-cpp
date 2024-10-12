@@ -44,5 +44,23 @@ int main() {
 
   std::cout << std::endl;
 
+  /**
+   * std::strncmp
+   */
+
+  const char *str1 = "Apple";
+  const char *str2 = "Apples";
+  unsigned short int n{5};
+
+  // Compare first 5 characters
+  int result = std::strncmp(str1, str2, n);
+  if (result == 0) {
+    std::cout << "The first 5 characters are equal." << std::endl;
+  } else if (result < 0) {
+    std::cout << "str1 is less than str2." << std::endl;
+  } else {
+    std::cout << "str1 is greater than str2." << std::endl;
+  }
+
   return 0;
 }
