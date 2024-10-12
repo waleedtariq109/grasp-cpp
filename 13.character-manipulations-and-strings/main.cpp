@@ -65,7 +65,6 @@ int main() {
 
   // Comparing strings
   std::cout << "std::strcmp(" << stringData1 << "," << stringData2 << "): " << std::strcmp(stringData1, stringData2) << std::endl;
-  std::cout << "std::strcmp(" << stringData2 << "," << stringData2 << "): " << std::strcmp(stringData1, stringData2) << std::endl;
 
   return 0;
 }
