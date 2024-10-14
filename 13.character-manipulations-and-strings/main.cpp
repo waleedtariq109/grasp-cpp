@@ -50,7 +50,7 @@ int main() {
 
   const char *str1 = "Apple";
   const char *str2 = "Apples";
-  unsigned short int n{5};
+  size_t n{5};
 
   // Compare first 5 characters
   int result = std::strncmp(str1, str2, n);
