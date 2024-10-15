@@ -20,9 +20,22 @@ int main() {
   std::cout << "greeting: " << greeting << std::endl;
   std::cout << "sayHello: " << sayHello << std::endl;
 
+  std::cout << &planet << std::endl;
   planet = "Earth, where sky is blue. Earth, where sky is blue. Earth, where sky is blue. Earth, where sky is blue";
-
+  std::cout << &planet << std::endl;
   std::cout << "planet: " << planet << std::endl;
+
+  /**
+   * std::string vs character pointer
+   *
+   * When we reassign a value to a std::string, the memory where the old string
+   * was stored is automatically freed, or you can say the new string replaces
+   * the previous one. However, when dealing with a character pointer, the
+   * previous string remains in memory even after reassignment.
+   *
+   * This is why std::string in C++ is a safer option for working with strings,
+   * as it handles memory management automatically.
+   */
 
   return 0;
 }
