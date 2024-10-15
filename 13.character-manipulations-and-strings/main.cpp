@@ -62,5 +62,23 @@ int main() {
     std::cout << "str1 is greater than str2." << std::endl;
   }
 
+  std::cout << std::endl;
+
+  /**
+   * std::strchr
+   */
+
+  const char *const str{"Try not. Do, or do not. There is no try."};
+  char Target{'T'};
+  const char *result1{str};
+  int iteration{0};
+
+  while ((result1 = std::strchr(result1, Target)) != nullptr) {
+    std::cout << "Found: " << Target << " starting at " << result1 << '\n';
+    ++result1;
+    ++iteration;
+  }
+  std::cout << "iterations: " << iteration << std::endl;
+
   return 0;
 }
