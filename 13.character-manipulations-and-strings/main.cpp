@@ -20,9 +20,7 @@ int main() {
   std::cout << "greeting: " << greeting << std::endl;
   std::cout << "sayHello: " << sayHello << std::endl;
 
-  std::cout << &planet << std::endl;
   planet = "Earth, where sky is blue. Earth, where sky is blue. Earth, where sky is blue. Earth, where sky is blue";
-  std::cout << &planet << std::endl;
   std::cout << "planet: " << planet << std::endl;
 
   /**
