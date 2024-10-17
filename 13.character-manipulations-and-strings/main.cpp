@@ -36,6 +36,11 @@ int main() {
   std::cout << "string7: " << string7 << std::endl;
   std::cout << "string8: " << string8 << std::endl;
 
+  /**
+   * The "s" suffix in C++ converts a C-style string (i.e., a string literal like "Hello")
+   * into a std::string object. This is part of user-defined literals in C++.
+   */
+
   using namespace std::string_literals;
   std::string string9{"Hello"s + " World"};
 
@@ -47,6 +52,21 @@ int main() {
 
   std::cout << "string9: " << string9 << std::endl;
   std::cout << "string10: " << string10 << std::endl;
+  std::cout << std::endl;
+
+  /**
+   * The std::string is a compund type so it has some properties
+   * and behaviour which we can use such as append
+   */
+  // Using the append method
+  std::cout << "Using the append method" << std::endl;
+  std::string string11{"Hello"};
+  std::string string12{" World"};
+  std::string string13{string11.append(string12)};
+  std::cout << "string13: " << string13 << std::endl;
+
+  std::string string14{std::string{"Hello"}.append(" World")};
+  std::cout << "string14: " << string14 << std::endl;
 
   std::cout << std::endl;
   return 0;
