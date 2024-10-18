@@ -67,6 +67,17 @@ int main() {
 
   std::string string14{std::string{"Hello"}.append(" World")};
   std::cout << "string14: " << string14 << std::endl;
+  std::cout << std::endl;
+
+  std::cout << "Append method can do more than + operator" << std::endl;
+  std::string string15{"Hello "};
+  std::string string16{string15.append(5, '?')};
+  std::cout << "string16: " << string16 << std::endl;
+
+  std::string string17{"The world is our home"};
+  std::string string18{"Hello "};
+  std::string string19{string18.append(string17, 4, 5)};
+  std::cout << "string19: " << string19 << std::endl;
 
   std::cout << std::endl;
   return 0;
