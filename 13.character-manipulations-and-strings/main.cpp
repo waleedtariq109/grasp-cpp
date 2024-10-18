@@ -94,6 +94,13 @@ int main() {
   std::string string23{"Hello"};
   (string23 += ',') += ' ';  // ASCII value will be added
   std::cout << "string23: " << string23 << std::endl;
+  std::cout << std::endl;
+
+  /**
+   * Appending C-Strings and char arrays
+   */
+
+  std::cout << "Appending C-Strings and char arrays" << std::endl;
 
   std::cout << std::endl;
   return 0;
