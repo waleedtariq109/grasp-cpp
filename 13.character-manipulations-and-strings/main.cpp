@@ -92,7 +92,7 @@ int main() {
   std::cout << std::endl;
 
   std::string string23{"Hello"};
-  string23 += ',' + ' ';  // ASCII value will be added
+  (string23 += ',') += ' ';  // ASCII value will be added
   std::cout << "string23: " << string23 << std::endl;
 
   std::cout << std::endl;
