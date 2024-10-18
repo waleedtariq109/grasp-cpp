@@ -78,6 +78,22 @@ int main() {
   std::string string18{"Hello "};
   std::string string19{string18.append(string17, 4, 5)};
   std::cout << "string19: " << string19 << std::endl;
+  std::cout << std::endl;
+
+  /**
+   * Concatenating strings and characters
+   */
+
+  std::cout << "Concatenating strings and characters" << std::endl;
+  std::string string20{"Hello"};
+  std::string string21{"World"};
+  std::string string22{string20 + ' ' + string21};
+  std::cout << "string22: " << string22 << std::endl;
+  std::cout << std::endl;
+
+  std::string string23{"Hello"};
+  string23 += ',' + ' ';  // ASCII value will be added
+  std::cout << "string23: " << string23 << std::endl;
 
   std::cout << std::endl;
   return 0;
