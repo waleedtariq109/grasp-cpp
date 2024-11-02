@@ -10,7 +10,7 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\rooster.exe",
+        "${fileDirname}\\build.exe",
         "-std=c++20"
       ],
       "options": {
