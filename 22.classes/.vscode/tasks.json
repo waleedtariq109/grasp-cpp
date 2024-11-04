@@ -10,8 +10,7 @@
         "-g",
         "${file}",
         "-o",
-        "${fileDirname}\\build.exe",
-        "-std=c++20"
+        "${fileDirname}\\build.exe"
       ],
       "options": {
         "cwd": "${fileDirname}"
