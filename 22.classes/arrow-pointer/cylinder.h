@@ -1,15 +1,19 @@
-#ifndef CYLINDER_H
-#define CYLINDER_H
+#ifndef CYLINDER
+#define CYLINDER
 
 class Cylinder {
  public:
   Cylinder() = default;
   Cylinder(double radiusParam, double heightParam);
+  double volume();
+
+  // Setters
+  void setBaseRadius(double radiusParam);
+  void setHeight(double height);
+
+  // Getters
   double getBaseRadius();
   double getHeight();
-  void setBaseRadius(double radiusParam);
-  void setHeight(double heightParam);
-  double volume();
 
  private:
   double baseRadius{1};
