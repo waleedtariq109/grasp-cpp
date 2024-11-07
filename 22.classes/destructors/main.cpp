@@ -26,5 +26,6 @@ Dog::~Dog() {
 }
 
 int main() {
-  Dog myDog("Fluffy", "Husky", 3);
+  Dog* myDog = new Dog("Fluffy", "Husky", 3);
+  delete myDog;
 }
