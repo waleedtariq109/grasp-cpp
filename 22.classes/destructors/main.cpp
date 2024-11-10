@@ -28,4 +28,5 @@ Dog::~Dog() {
 int main() {
   Dog myDog("Fluffy", "Husky", 3);
   Dog myDog1("Fluffy", "Husky", 3);
+  Dog myDog2("Fluffy", "Husky", 3);
 }
