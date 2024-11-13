@@ -6,15 +6,15 @@ class Dog {
   Dog() = default;
   Dog(std::string_view nameParam, std::string_view breedParam, int ageParam);
   ~Dog();
-  void setDogName(std::string_view name);
-  void setDogAge(int age);
-  void setDogBreed(std::string_view breed);
+  Dog* setDogName(std::string_view name);
+  Dog* setDogAge(int age);
+  Dog* setDogBreed(std::string_view breed);
   void printDogInfo();
 
  private:
   std::string name;
   std::string breed;
-  int *age{nullptr};
+  int* age{nullptr};
 };
 
 Dog::Dog(std::string_view nameParam, std::string_view breedParam, int ageParam) {
@@ -29,20 +29,23 @@ Dog::~Dog() {
   std::cout << "Dog destructor called for " << name << " at " << this << std::endl;
 }
 
-void Dog::setDogName(std::string_view name) {
+Dog* Dog::setDogName(std::string_view name) {
   this->name = name;
+  return this;
 }
 
 void Dog::printDogInfo() {
   std::cout << "Dog(" << this << "): " << "[name: " << this->name << ", " << "breed: " << this->breed << ", " << "age: " << *this->age << "]" << std::endl;
 }
 
-void Dog::setDogBreed(std::string_view breed) {
+Dog* Dog::setDogBreed(std::string_view breed) {
   this->breed = breed;
+  return this;
 }
 
-void Dog::setDogAge(int age) {
+Dog* Dog::setDogAge(int age) {
   *this->age = age;
+  return this;
 }
 
 int main() {
@@ -52,6 +55,9 @@ int main() {
   dog1.setDogName("Chop");
   dog1.setDogBreed("Shephered");
   dog1.setDogAge(3);
+  dog1.printDogInfo();
+
+  dog1.setDogName("Ala bai")->setDogBreed("Central Asian Shephered")->setDogAge(3);
   dog1.printDogInfo();
 
   std::cout << "DONE" << std::endl;
