@@ -38,6 +38,11 @@ void passByConstReference(const Dog& dog) {
   // dog.getAge(); // Compiler error
 }
 
+/**
+ * If we are using the pointers instead of reference then we still
+ * got the same behavior that we are getting for reference
+ */
+
 int main() {
   std::cout << std::endl;
 
