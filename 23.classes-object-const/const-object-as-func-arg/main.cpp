@@ -28,6 +28,16 @@ void passByNonConstReference(Dog& dog) {
   // If we pass a const ref, code will not compiler
 }
 
+/**
+ * In this function we can receive our const object because
+ * we are receiving as a const reference but this will also
+ * not going to solve our problem. It's same as before where
+ * we seen that we can't read or write data of const object
+ */
+void passByConstReference(const Dog& dog) {
+  // dog.getAge(); // Compiler error
+}
+
 int main() {
   std::cout << std::endl;
 
@@ -38,6 +48,8 @@ int main() {
   std::cout << std::endl;
 
   // passByNonConstReference(dog1);  // Compiler error
+
+  passByConstReference(dog1);
 
   std::cout << std::endl;
 }
