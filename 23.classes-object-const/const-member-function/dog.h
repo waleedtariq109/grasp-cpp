@@ -10,9 +10,9 @@ class Dog {
   Dog(std::string_view name, std::string_view breed, unsigned int age);
 
   // Getters
-  std::string_view getName();
-  std::string_view getBreed();
-  unsigned int getAge();
+  std::string_view getName() const;
+  std::string_view getBreed() const;
+  unsigned int getAge() const;
 
   // Setters
   void setName(std::string_view name);
@@ -20,7 +20,7 @@ class Dog {
   void setAge(int age);
 
   // Helpers
-  void printInfo();
+  void printInfo() const;
 
  private:
   std::string_view name;
