@@ -2,9 +2,8 @@
 
 #include "constant.h"
 
-Cylinder::Cylinder(double radius, double height) {
-  this->baseRadius = radius;
-  this->baseHeight = height;
+Cylinder::Cylinder(double radius, double height) : baseRadius(radius), baseHeight(height) {
+  // baseRadius and baseHeight are already initialized
 }
 
 double Cylinder::getBaseHeight() const {
