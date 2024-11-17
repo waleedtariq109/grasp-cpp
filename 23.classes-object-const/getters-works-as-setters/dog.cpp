@@ -9,13 +9,13 @@ Dog::Dog(std::string_view name, std::string_view breed, unsigned int age) {
 };
 
 // Getters
-std::string_view Dog::getName() {
+std::string_view Dog::getName() const {
   return this->name;
 };
-std::string_view Dog::getBreed() {
+std::string_view Dog::getBreed() const {
   return this->breed;
 };
-unsigned int Dog::getAge() {
+unsigned int Dog::getAge() const {
   return this->age;
 };
 
