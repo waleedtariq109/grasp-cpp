@@ -3,8 +3,7 @@
 
 class Cylinder {
  public:
-  Cylinder() = default;
-  Cylinder(double radius, double height);
+  Cylinder(double radius = 1.0, double height = 1.0);
 
   // Getters
   double getBaseRadius() const;
