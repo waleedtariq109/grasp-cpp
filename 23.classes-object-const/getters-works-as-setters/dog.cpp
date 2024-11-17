@@ -2,32 +2,21 @@
 
 #include <iostream>
 
-Dog::Dog(std::string_view name, std::string_view breed, unsigned int age) {
+Dog::Dog(const std::string& name, const std::string& breed, const unsigned int& age) {
   this->name = name;
   this->breed = breed;
   this->age = age;
 };
 
 // Getters
-std::string_view Dog::getName() const {
+std::string& Dog::Name() {
   return this->name;
 };
-std::string_view Dog::getBreed() const {
+std::string& Dog::Breed() {
   return this->breed;
 };
-unsigned int Dog::getAge() const {
+unsigned int& Dog::Age() {
   return this->age;
-};
-
-// Setters
-void Dog::setName(std::string_view name) {
-  this->name = name;
-};
-void Dog::setBreed(std::string_view breed) {
-  this->breed = breed;
-};
-void Dog::setAge(int age) {
-  this->age = age;
 };
 
 // Helpers

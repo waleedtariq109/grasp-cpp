@@ -2,29 +2,23 @@
 #define DOG_CLASS_HEADER
 
 #include <string>
-#include <string_view>
 
 class Dog {
  public:
   Dog() = default;
-  Dog(std::string_view name, std::string_view breed, unsigned int age);
+  Dog(const std::string& name, const std::string& breed, const unsigned int& age);
 
-  // Getters
-  std::string_view getName() const;
-  std::string_view getBreed() const;
-  unsigned int getAge() const;
-
-  // Setters
-  void setName(std::string_view name);
-  void setBreed(std::string_view breed);
-  void setAge(int age);
+  // Getters and setters
+  std::string& Name();
+  std::string& Breed();
+  unsigned int& Age();
 
   // Helpers
   void printInfo() const;
 
  private:
-  std::string_view name;
-  std::string_view breed;
+  std::string name;
+  std::string breed;
   unsigned int age;
 };
 
