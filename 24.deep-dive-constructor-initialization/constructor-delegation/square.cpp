@@ -3,10 +3,14 @@
 #include <iostream>
 
 Square::Square(double side) :
-    side(side) {}
+    Square(side, "red", 9) {
+  std::cout << "First" << std::endl;
+}
 
 Square::Square(double side, std::string color, int shading) :
-    side(side), color(color), shading(shading) {}
+    side(side), color(color), shading(shading) {
+  std::cout << "Second" << std::endl;
+}
 
 Square::~Square() {
   std::cout << std::endl;
