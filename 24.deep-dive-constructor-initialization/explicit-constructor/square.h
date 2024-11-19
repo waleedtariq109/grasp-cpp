@@ -3,7 +3,7 @@
 
 class Square {
  public:
-  Square(double side);
+  explicit Square(double side);
   ~Square();
 
   double Surface() const;

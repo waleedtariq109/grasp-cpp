@@ -2,9 +2,9 @@
 
 #include <iostream>
 
-Square::Square(double side) {
-  this->side = side;
-};
+Square::Square(double side) :
+    side{side} {
+    };
 
 Square::~Square() {
   std::cout << "Destructor called" << std::endl;
