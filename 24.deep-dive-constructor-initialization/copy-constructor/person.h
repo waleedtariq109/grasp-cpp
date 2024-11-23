@@ -1,6 +1,9 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-class Person {};
+class Person {
+ public:
+ private:
+};
 
 #endif
