@@ -10,13 +10,25 @@ class Person {
   Person(std::string lastName, std::string firstName);
   Person(std::string lastName);
 
-  void setPersonAge(int age) const;
+  ~Person();
+
+  // Setters
+  void setFirstName(const std::string& firstName);
+  void setLastName(const std::string& lastName);
+  void setAge(const int& age);
+
+  // Getters
+  const std::string& getFirstName() const;
+  const std::string& getLastName() const;
+  const int* getAge() const;
+
+  // Utilities
   void printPersonInfo() const;
 
  private:
   std::string firstName{};
   std::string lastName{};
-  int* age{};
+  int* age{nullptr};
 };
 
 #endif
