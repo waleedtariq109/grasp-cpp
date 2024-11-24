@@ -10,7 +10,8 @@ class Person {
   Person(std::string lastName, std::string firstName);
   Person(std::string lastName);
 
-  void printPersonInfo();
+  void setPersonAge(int age) const;
+  void printPersonInfo() const;
 
  private:
   std::string firstName{};

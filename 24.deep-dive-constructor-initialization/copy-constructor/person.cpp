@@ -11,6 +11,10 @@ Person::Person(std::string lastName, std::string firstName) :
 Person::Person(std::string lastName) :
     lastName{lastName} {}
 
-void Person::printPersonInfo() {
+void Person::setPersonAge(int age) const {
+  *this->age = age;
+}
+
+void Person::printPersonInfo() const {
   std::cout << "Person object at " << this << " [lastName: " << this->lastName << ", firstName: " << this->firstName << ", age: " << *this->age << "]" << std::endl;
 }
