@@ -2,11 +2,7 @@
 
 #include <iostream>
 
-Person::Person(std::string lastName, std::string firstName, int age) {
-  this->firstName = firstName;
-  this->lastName = lastName;
-  this->age = new int(age);
-}
+Person::Person(std::string lastName, std::string firstName, int age) {}
 
 Person::Person(std::string lastName, std::string firstName) {}
 
