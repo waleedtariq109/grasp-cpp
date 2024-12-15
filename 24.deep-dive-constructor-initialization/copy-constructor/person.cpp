@@ -3,14 +3,14 @@
 
 #include "person.h"
 
-Person::Person(std::string lastName, std::string firstName, int age) : lastName(lastName), firstName(firstName), age(new int(age)) {}
+Person::Person(const std::string& lastName, const std::string& firstName, int age) : lastName(lastName), firstName(firstName), age(new int(age)) {}
 
-Person::Person(std::string lastName, std::string firstName) : lastName(lastName), firstName(firstName) {}
+Person::Person(const std::string& lastName, const std::string& firstName) : Person(lastName, firstName, 0) {}
 
-Person::Person(std::string lastName) : lastName(lastName) {}
+Person::Person(const std::string& lastName) : Person(lastName, "") {}
 
 Person::~Person() {
-  delete this->age;
+  // delete this->age;
 }
 
 void Person::setFirstName(const std::string& firstName) {

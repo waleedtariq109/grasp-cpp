@@ -7,9 +7,9 @@ class Person {
   public:
     // Constructors
     Person() = default;
-    Person(std::string lastName, std::string firstName, int age);
-    Person(std::string lastName, std::string firstName);
-    Person(std::string lastName);
+    Person(const std::string& lastName, const std::string& firstName, int age);
+    Person(const std::string& lastName, const std::string& firstName);
+    Person(const std::string& lastName);
 
     // Destructors
     ~Person();
