@@ -2,13 +2,11 @@
 
 #include <iostream>
 
-Square::Square(double side) :
-    Square(side, "red", 9) {
+Square::Square(double side) : Square(side, "red", 9) {
   std::cout << "First" << std::endl;
 }
 
-Square::Square(double side, std::string color, int shading) :
-    side(side), color(color), shading(shading) {
+Square::Square(double side, std::string color, int shading) : side(side), color(color), shading(shading) {
   std::cout << "Second" << std::endl;
 }
 
