@@ -25,4 +25,6 @@ int main() {
 
   std::cout << std::endl;
 
+  std::cout << "Programs end" << std::endl;
+
 }
