@@ -24,7 +24,4 @@ int main() {
   p2.printInfo();
 
   std::cout << std::endl;
-
-  std::cout << "Programs end" << std::endl;
-
 }
