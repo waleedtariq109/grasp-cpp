@@ -1,13 +1,19 @@
+#include "person.h"
+
 #include <iostream>
 #include <string>
-
-#include "person.h"
 
 Person::Person(const std::string& lastName, const std::string& firstName, int age) : lastName(lastName), firstName(firstName), age(new int(age)) {}
 
 Person::Person(const std::string& lastName, const std::string& firstName) : Person(lastName, firstName, 0) {}
 
 Person::Person(const std::string& lastName) : Person(lastName, "") {}
+
+Person::Person(const Person& object) {
+  this->firstName = object.firstName;
+  this->lastName = object.lastName;
+  this->age = new int(*object.age);
+}
 
 Person::~Person() {
   // delete this->age;
