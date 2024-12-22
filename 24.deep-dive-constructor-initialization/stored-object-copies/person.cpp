@@ -10,6 +10,7 @@ Person::Person(const std::string& lastName, const std::string& firstName) : Pers
 Person::Person(const std::string& lastName) : Person(lastName, "") {}
 
 Person::Person(const Person& object) {
+  std::cout << "Copy Constructor Called" << std::endl;
   this->firstName = object.firstName;
   this->lastName = object.lastName;
   this->age = new int(*object.age);
