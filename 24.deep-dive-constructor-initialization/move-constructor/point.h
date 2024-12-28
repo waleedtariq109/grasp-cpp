@@ -13,7 +13,7 @@ class Point {
   const double* getX() const;
   const double* getY() const;
 
-  const void printInfo() const;
+  void printInfo() const;
 
  private:
   double* x{nullptr};
