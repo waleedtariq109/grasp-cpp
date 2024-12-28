@@ -4,6 +4,7 @@
 class Point {
  public:
   Point(double x, double y);
+  Point(Point&& sourcePoint);
   Point(const Point& sourcePoint);
   ~Point();
 

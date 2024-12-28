@@ -10,6 +10,11 @@ Point::Point(const Point& sourcePoint) : x(new double(*sourcePoint.getX())), y(n
   std::cout << "Copy constructor called" << std::endl;
 }
 
+Point::Point(Point&& sourcePoint) : x(sourcePoint.x), y(sourcePoint.y) {
+  std::cout << "Move constructor called" << std::endl;
+  sourcePoint.invalidate();
+}
+
 Point::~Point() {
   delete x;
   delete y;
@@ -24,8 +29,8 @@ const double* Point::getY() const {
 }
 
 void Point::printInfo() const {
-  std::cout << "x: " << this->x << std::endl;
-  std::cout << "y: " << this->y << std::endl;
+  std::cout << "x: " << *this->x << std::endl;
+  std::cout << "y: " << *this->y << std::endl;
 }
 
 void Point::setX(double x) {
